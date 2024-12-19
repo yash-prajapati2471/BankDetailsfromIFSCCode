@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--heading text view-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="IFSC Code Validator"
+        android:textAlignment="center"
+        android:textColor="#9c27b0"
+        android:textSize="30sp" />
+
+    <!-- edit text for entering our IFSC code
+        we are specifying input type as number
+        and we are also mentioning our input type
+        as textcapCharacters because IFSC code is
+        having all capital characters-->
+    <EditText
+        android:id="@+id/idedtIfscCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:hint="Enter IFSC code"
+        android:importantForAutofill="no"
+        android:inputType="textCapCharacters"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:textAllCaps="true" />
+
+    <!--button to get the data from IFSC code-->
+    <Button
+        android:id="@+id/idBtnGetBankDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:text="Get Bank Details"
+        android:textAllCaps="false" />
+
+    <!--text view to display the
+        data received from IFSC code-->
+    <TextView
+        android:id="@+id/idTVBankDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:textAllCaps="false"
+        android:textColor="#9c27b0"
+        android:textSize="20sp"
+        android:textAlignment="viewStart"/>
+
+</LinearLayout>
